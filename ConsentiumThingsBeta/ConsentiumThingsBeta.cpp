@@ -16,7 +16,6 @@ bool sendAT(String command,char response[]){
     return false;  
 }
 
-
 void ConsentiumThingsBeta::initWiFi(const char* ssid, const char* password){
   sendAT("AT", (char*) "OK");
   sendAT("AT+CWMODE=3", (char*) "OK");
