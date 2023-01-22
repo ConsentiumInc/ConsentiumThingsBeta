@@ -3,7 +3,7 @@
   ----> http://consentiuminc.online/
   Check out the links above for our tutorials and product diagrams.
 
-  This is Consentium Inc's IoT library works only for 5v tolerant Edge Beta boards. 
+  This Consentium Inc's IoT library works only for 5v tolerant Edge Beta boards. 
  
   Written by Debjyoti Chowdhury for Consentium Inc.
   MIT license, all text above must be included in any redistribution
@@ -25,10 +25,11 @@ void setup(){
 }
 
 void loop(){
-  float data_0 = analogRead(A0)*0.488; // Example sensor data read from A0
-  
-  float sensor_val[] = {data_0};  // sensor data array
-  String info_buff[] = {"Temperature"}; // sensor info. array
+  float data_0 = analogRead(IN_4_20_1)*SCALE; // Read 4-20mA sensor data form J1 port 1
+  float data_1 = analogRead(IN_0_10_1)*SCALE; // Read 0-10V sensor data form J2 port 1
+
+  float sensor_val[] = {data_0, data_1};  // sensor data array
+  String info_buff[] = {"Temperature", "Pressure"}; // sensor info. array
   
   int sensor_num = sizeof(sensor_val)/sizeof(sensor_val[0]); // number of sensors connected 
   
