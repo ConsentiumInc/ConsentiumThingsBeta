@@ -8,13 +8,18 @@
 #define INTERVAL_MUL 1000
 
 // io definitions
-#define SCALE 0.488
+#define SCALE 0.0048828125
+
 #define IN_4_20_1 A0
 #define IN_4_20_2 A1
 #define IN_4_20_3 A2 
+
 #define IN_0_10_1 A3
 #define IN_0_10_2 A4
 #define IN_0_10_3 A5
+
+#define IN_0_5_1 A6
+#define IN_0_5_2 A7
 
 // precision value
 #define LOW_PRE 2
